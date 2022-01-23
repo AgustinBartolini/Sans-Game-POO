@@ -10,17 +10,14 @@ class RequestModelTest extends TestCase {
     {
         $requestData = [
             "id" => null,
-            "topic" => "Printer problem",
-            "description" => "Impossible print with printer",
-            "userName" => "giaco",
-            "create_at" => "",
+            "user" => "giaco",
+            "score" => "109",
         ];
 
-        $request = new RequestModel($requestData["topic"], $requestData["description"], $requestData["userName"], $requestData["id"], $requestData["create_at"]);
+        $request = new RequestModel($requestData["user"], $requestData["score"], $requestData["id"]);
 
-        $this->assertEquals("Printer problem", $request->getTopic());
-        $this->assertEquals("Impossible print with printer", $request->getDescription());
-        $this->assertEquals("giaco", $request->getUserName());
+        $this->assertEquals("giaco", $request->getUser());
+        $this->assertEquals("109", $request->getScore());
     }
     
 

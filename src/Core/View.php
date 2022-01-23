@@ -12,10 +12,6 @@ class View {
         require_once("./src/Views/$view.php");
     }
 
-
-    /**
-     * Get the value of view
-     */ 
     public function getView()
     {
         return $this->view;
